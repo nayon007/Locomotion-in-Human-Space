@@ -1,4 +1,4 @@
-# go2_d1 Handover Project (ROS 2 Humble)
+# go2 human space Project (ROS 2 Humble)
 
 This workspace contains a **unique end-to-end pipeline** for *human–robot bottle handover* on the `go2_d1` quadruped with an arm:
 - **Perception**: ArUco-based 6D pose of the bottle + coarse person/hand detection.
