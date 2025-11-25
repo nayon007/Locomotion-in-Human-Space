@@ -25,7 +25,6 @@ Real-robot following bottle on the Go2 platform:
        muted
        playsinline
        style="max-width: 100%; height: auto;">
-  Your browser does not support the video tag.
 </video>
 
 
