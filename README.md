@@ -1,5 +1,5 @@
 
-````markdown
+
 # go2 Human Space Project (ROS 2 Humble)
 
 This workspace implements an end-to-end **real-robot** pipeline for *human–robot bottle handover* using a Go2-style quadruped with a 6-DoF D1 arm:
