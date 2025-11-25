@@ -18,9 +18,8 @@ This workspace implements an end-to-end **real-robot** pipeline for *human–rob
 
 Real-robot bottle handover on the Go2-like platform:
 
-[▶️ Handover demo](./IMG_6808.MOV)
+[▶️ Handover demo](./IMG_6808.mp4)
 
-*(If you renamed the file to `.mp4`, update this link to `./IMG_6808.mp4`.)*
 
 ---
 
