@@ -19,7 +19,7 @@ This workspace implements an end-to-end **real-robot** pipeline for *human–rob
 
 Real-robot following bottle on the Go2 platform:
 
-<video src="IMG_6808.MOV"
+<video src="IMG_6808.mp4"
        controls
        loop
        muted
