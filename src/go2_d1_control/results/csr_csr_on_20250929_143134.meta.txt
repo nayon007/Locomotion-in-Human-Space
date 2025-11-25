@@ -1,0 +1,8 @@
+label=csr_on
+stop_band=0.7
+v_thresh=0.06
+settle_window=1.0
+entry_t=None
+settle_t=None
+dwell=nan
+residual_rms=nan

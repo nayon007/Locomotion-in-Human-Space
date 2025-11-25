@@ -1,0 +1,11 @@
+perception:
+  use_aruco: true         # Robust and simple demo path. Attach a 5x5 ArUco (id=0) to the bottle.
+  aruco_dict: "DICT_5X5_100"
+  aruco_id: 0
+  marker_size_m: 0.05     # 5 cm marker
+  camera_frame: "front_camera_optical"
+  base_frame: "base_link"
+  publish_markers: true
+  min_human_bottle_distance_m: 0.15  # if bottle pose is within 15 cm of detected hand/person, consider 'held'
+  image_topic: "/front_camera/image_raw"
+  camera_info_topic: "/front_camera/camera_info"

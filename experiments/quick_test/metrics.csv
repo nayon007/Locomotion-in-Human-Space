@@ -1,0 +1,2 @@
+trial_id,entry_ex_px,entry_ey_px,entry_ed_cm,time_to_entry_s,dwell_achieved_s,residual_inband_cm,residual_inband_px,jerk_proxy_mps3,fresh_fraction
+quick_test,174.76,-17.31,5.2,10.15,0.70,6.3,175.6,7.0602,1.000

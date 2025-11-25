@@ -1,0 +1,12 @@
+impedance:
+  base_frame: "base_link"
+  ee_link: "Link6"
+  joints: ["Joint1","Joint2","Joint3","Joint4","Joint5","Joint6"]
+  K_xyz: [1200.0, 1200.0, 1500.0]   # N/m
+  D_xyz: [40.0, 40.0, 50.0]         # N*s/m
+  K_ang: [30.0, 30.0, 30.0]         # Nm/rad
+  D_ang: [2.0,  2.0,  2.0]          # Nms/rad
+  max_cart_vel: 0.15                # m/s
+  max_joint_vel: 0.8                # rad/s
+  target_topic: "/ee_target"
+  arm_controller_name: "/arm_controller"

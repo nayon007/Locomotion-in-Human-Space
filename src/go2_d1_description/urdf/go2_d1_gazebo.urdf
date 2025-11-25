@@ -1,0 +1,1606 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<robot name="go2_d1">
+  <!-- ROS 2 Control -->
+  <gazebo>
+    <plugin filename="ign_ros2_control-system" name="ign_ros2_control::IgnitionROS2ControlPlugin">
+      <parameters>/home/hafiz/go2_d1_ws/install/go2_d1_controller/share/go2_d1_controller/config/go2_d1_controllers.yaml</parameters>
+    </plugin>
+  </gazebo>
+  <!-- Foot friction and contact physics -->
+  <gazebo reference="FL_foot">
+    <mu1>1.5</mu1>
+    <mu2>1.5</mu2>
+    <kp>100000</kp>
+    <kd>10</kd>
+  </gazebo>
+  <gazebo reference="FR_foot">
+    <mu1>1.5</mu1>
+    <mu2>1.5</mu2>
+    <kp>100000</kp>
+    <kd>10</kd>
+  </gazebo>
+  <gazebo reference="RL_foot">
+    <mu1>1.5</mu1>
+    <mu2>1.5</mu2>
+    <kp>100000</kp>
+    <kd>10</kd>
+  </gazebo>
+  <gazebo reference="RR_foot">
+    <mu1>1.5</mu1>
+    <mu2>1.5</mu2>
+    <kp>100000</kp>
+    <kd>10</kd>
+  </gazebo>
+  <ros2_control name="RobotSystem" type="system">
+    <hardware>
+      <plugin>ign_ros2_control/IgnitionSystem</plugin>
+    </hardware>
+    <joint name="Joint7_2">
+      <param name="mimic">Joint7_1</param>
+      <param name="multiplier">-1</param>
+    </joint>
+    <joint name="FL_hip_joint">
+      <command_interface name="position">
+        <param name="min">-1.570796326795</param>
+        <param name="max">1.570796326795</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="FL_thigh_joint">
+      <command_interface name="position">
+        <param name="min">-1.570796326795</param>
+        <param name="max">1.570796326795</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="FL_calf_joint">
+      <command_interface name="position">
+        <param name="min">-1.570796326795</param>
+        <param name="max">1.570796326795</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="FR_hip_joint">
+      <command_interface name="position">
+        <param name="min">-1.570796326795</param>
+        <param name="max">1.570796326795</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="FR_thigh_joint">
+      <command_interface name="position">
+        <param name="min">-1.570796326795</param>
+        <param name="max">1.570796326795</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="FR_calf_joint">
+      <command_interface name="position">
+        <param name="min">-1.570796326795</param>
+        <param name="max">1.570796326795</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="RL_hip_joint">
+      <command_interface name="position">
+        <param name="min">-1.570796326795</param>
+        <param name="max">1.570796326795</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="RL_thigh_joint">
+      <command_interface name="position">
+        <param name="min">-1.570796326795</param>
+        <param name="max">1.570796326795</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="RL_calf_joint">
+      <command_interface name="position">
+        <param name="min">-1.570796326795</param>
+        <param name="max">1.570796326795</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="RR_hip_joint">
+      <command_interface name="position">
+        <param name="min">-1.570796326795</param>
+        <param name="max">1.570796326795</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="RR_thigh_joint">
+      <command_interface name="position">
+        <param name="min">-1.570796326795</param>
+        <param name="max">1.570796326795</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="RR_calf_joint">
+      <command_interface name="position">
+        <param name="min">-1.570796326795</param>
+        <param name="max">1.570796326795</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="Joint1">
+      <command_interface name="position">
+        <param name="min">-1.570796326795</param>
+        <param name="max">1.570796326795</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="Joint2">
+      <command_interface name="position">
+        <param name="min">-1.570796326795</param>
+        <param name="max">1.570796326795</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="Joint3">
+      <command_interface name="position">
+        <param name="min">-1.570796326795</param>
+        <param name="max">1.570796326795</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="Joint4">
+      <command_interface name="position">
+        <param name="min">-1.570796326795</param>
+        <param name="max">1.570796326795</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="Joint5">
+      <command_interface name="position">
+        <param name="min">-1.570796326795</param>
+        <param name="max">1.570796326795</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="Joint6">
+      <command_interface name="position">
+        <param name="min">-1.570796326795</param>
+        <param name="max">1.570796326795</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="Joint7_1">
+      <command_interface name="position">
+        <param name="min">-1.570796326795</param>
+        <param name="max">0.0</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+  </ros2_control>
+  <!-- xacro for transmission -->
+  <!-- <xacro:macro name='default_transmission' params='joint_name'>
+    <transmission>
+      <plugin>transmission_interface/SimpleTransmission</plugin>
+      <actuator name="motor_of_joint_${joint_name}" role="actuator1"/>
+      <joint name="${joint_name}" role="joint1">
+        <mechanical_reduction>1.0</mechanical_reduction>
+      </joint>
+    </transmission>
+  </xacro:macro> -->
+  <!-- Links -->
+  <link name="base">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.021112 0 -0.005366"/>
+      <mass value="6.921"/>
+      <inertia ixx="0.02448" ixy="0.00012166" ixz="0.0014849" iyy="0.098077" iyz="-3.12E-05" izz="0.107"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/base.stl"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.3762 0.0935 0.114"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Head_upper">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="9.6e-06" ixy="0" ixz="0" iyy="9.6e-06" iyz="0" izz="9.6e-06"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.09" radius="0.05"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint dont_collapse="true" name="Head_upper_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.285 0 0.01"/>
+    <parent link="base"/>
+    <child link="Head_upper"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="Head_lower">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="9.6e-06" ixy="0" ixz="0" iyy="9.6e-06" iyz="0" izz="9.6e-06"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <sphere radius="0.047"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint dont_collapse="true" name="Head_lower_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.008 0 -0.07"/>
+    <parent link="Head_upper"/>
+    <child link="Head_lower"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="FL_hip">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.0054 0.00194 -0.000105"/>
+      <mass value="0.678"/>
+      <inertia ixx="0.00048" ixy="-3.01E-06" ixz="1.11E-06" iyy="0.000884" iyz="-1.42E-06" izz="0.000596"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/hip.stl"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0.08 0"/>
+      <geometry>
+        <cylinder length="0.04" radius="0.046"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="FL_hip_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="0.1934 0.0465 0"/>
+    <parent link="base"/>
+    <child link="FL_hip"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="23.7" lower="-1.0472" upper="1.0472" velocity="30.1"/>
+  </joint>
+  <link name="FL_hip_rotor">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.089"/>
+      <inertia ixx="0.000111842" ixy="0.0" ixz="0.0" iyy="0.000059647" iyz="0.0" izz="0.000059647"/>
+    </inertial>
+  </link>
+  <joint name="FL_hip_rotor_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.11215 0.04675 0"/>
+    <parent link="base"/>
+    <child link="FL_hip_rotor"/>
+  </joint>
+  <link name="FL_thigh">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.00374 -0.0223 -0.0327"/>
+      <mass value="1.152"/>
+      <inertia ixx="0.00584" ixy="8.72E-05" ixz="-0.000289" iyy="0.0058" iyz="0.000808" izz="0.00103"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/thigh.stl"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 1.5707963267948966 0" xyz="0 0 -0.1065"/>
+      <geometry>
+        <box size="0.213 0.0245 0.034"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="FL_thigh_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0.0955 0"/>
+    <parent link="FL_hip"/>
+    <child link="FL_thigh"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="23.7" lower="-1.5708" upper="3.4907" velocity="30.1"/>
+  </joint>
+  <link name="FL_thigh_rotor">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.089"/>
+      <inertia ixx="0.000059647" ixy="0.0" ixz="0.0" iyy="0.000111842" iyz="0.0" izz="0.000059647"/>
+    </inertial>
+  </link>
+  <joint name="FL_thigh_rotor_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 -0.00015 0"/>
+    <parent link="FL_hip"/>
+    <child link="FL_thigh_rotor"/>
+  </joint>
+  <link name="FL_calf">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.00548 -0.000975 -0.115"/>
+      <mass value="0.154"/>
+      <inertia ixx="0.00108" ixy="3.4E-07" ixz="1.72E-05" iyy="0.0011" iyz="8.28E-06" izz="3.29E-05"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/calf.stl"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 -0.21 0" xyz="0.008 0 -0.06"/>
+      <geometry>
+        <cylinder length="0.12" radius="0.012"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="FL_calf_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0 -0.213"/>
+    <parent link="FL_thigh"/>
+    <child link="FL_calf"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="45.43" lower="-2.7227" upper="-0.83776" velocity="15.70"/>
+  </joint>
+  <link name="FL_calflower">
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.065" radius="0.011"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="FL_calflower_joint" type="fixed">
+    <origin rpy="0 0.05 0" xyz="0.020 0 -0.148"/>
+    <parent link="FL_calf"/>
+    <child link="FL_calflower"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="FL_calflower1">
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.03" radius="0.0155"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="FL_calflower1_joint" type="fixed">
+    <origin rpy="0 0.48 0" xyz="-0.01 0 -0.04"/>
+    <parent link="FL_calflower"/>
+    <child link="FL_calflower1"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="FL_calf_rotor">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.089"/>
+      <inertia ixx="0.000059647" ixy="0.0" ixz="0.0" iyy="0.000111842" iyz="0.0" izz="0.000059647"/>
+    </inertial>
+  </link>
+  <joint name="FL_calf_rotor_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 -0.03235 0"/>
+    <parent link="FL_thigh"/>
+    <child link="FL_calf_rotor"/>
+  </joint>
+  <link name="FL_foot">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.04"/>
+      <inertia ixx="9.6e-06" ixy="0" ixz="0" iyy="9.6e-06" iyz="0" izz="9.6e-06"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/foot.stl"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.002 0 0"/>
+      <geometry>
+        <sphere radius="0.022"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint dont_collapse="true" name="FL_foot_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 -0.213"/>
+    <parent link="FL_calf"/>
+    <child link="FL_foot"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="FR_hip">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.0054 -0.00194 -0.000105"/>
+      <mass value="0.678"/>
+      <inertia ixx="0.00048" ixy="3.01E-06" ixz="1.11E-06" iyy="0.000884" iyz="1.42E-06" izz="0.000596"/>
+    </inertial>
+    <visual>
+      <origin rpy="3.1415 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/hip.stl"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 -0.08 0"/>
+      <geometry>
+        <cylinder length="0.04" radius="0.046"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="FR_hip_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="0.1934 -0.0465 0"/>
+    <parent link="base"/>
+    <child link="FR_hip"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="23.7" lower="-1.0472" upper="1.0472" velocity="30.1"/>
+  </joint>
+  <link name="FR_hip_rotor">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.089"/>
+      <inertia ixx="0.000111842" ixy="0.0" ixz="0.0" iyy="0.000059647" iyz="0.0" izz="0.000059647"/>
+    </inertial>
+  </link>
+  <joint name="FR_hip_rotor_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.11215 -0.04675 0"/>
+    <parent link="base"/>
+    <child link="FR_hip_rotor"/>
+  </joint>
+  <link name="FR_thigh">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.00374 0.0223 -0.0327"/>
+      <mass value="1.152"/>
+      <inertia ixx="0.00584" ixy="-8.72E-05" ixz="-0.000289" iyy="0.0058" iyz="-0.000808" izz="0.00103"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/thigh_mirror.stl"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 1.5707963267948966 0" xyz="0 0 -0.1065"/>
+      <geometry>
+        <box size="0.213 0.0245 0.034"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="FR_thigh_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="0 -0.0955 0"/>
+    <parent link="FR_hip"/>
+    <child link="FR_thigh"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="23.7" lower="-1.5708" upper="3.4907" velocity="30.1"/>
+  </joint>
+  <link name="FR_thigh_rotor">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.089"/>
+      <inertia ixx="0.000059647" ixy="0.0" ixz="0.0" iyy="0.000111842" iyz="0.0" izz="0.000059647"/>
+    </inertial>
+  </link>
+  <joint name="FR_thigh_rotor_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0.00015 0"/>
+    <parent link="FR_hip"/>
+    <child link="FR_thigh_rotor"/>
+  </joint>
+  <link name="FR_calf">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.00548 0.000975 -0.115"/>
+      <mass value="0.154"/>
+      <inertia ixx="0.00108" ixy="-3.4E-07" ixz="1.72E-05" iyy="0.0011" iyz="-8.28E-06" izz="3.29E-05"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/calf_mirror.stl"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 -0.2 0" xyz="0.01 0 -0.06"/>
+      <geometry>
+        <cylinder length="0.12" radius="0.013"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="FR_calf_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0 -0.213"/>
+    <parent link="FR_thigh"/>
+    <child link="FR_calf"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="45.43" lower="-2.7227" upper="-0.83776" velocity="15.70"/>
+  </joint>
+  <link name="FR_calflower">
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.065" radius="0.011"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="FR_calflower_joint" type="fixed">
+    <origin rpy="0 0.05 0" xyz="0.020 0 -0.148"/>
+    <parent link="FR_calf"/>
+    <child link="FR_calflower"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="FR_calflower1">
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.03" radius="0.0155"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="FR_calflower1_joint" type="fixed">
+    <origin rpy="0 0.48 0" xyz="-0.01 0 -0.04"/>
+    <parent link="FR_calflower"/>
+    <child link="FR_calflower1"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="FR_calf_rotor">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.089"/>
+      <inertia ixx="0.000059647" ixy="0.0" ixz="0.0" iyy="0.000111842" iyz="0.0" izz="0.000059647"/>
+    </inertial>
+  </link>
+  <joint name="FR_calf_rotor_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0.03235 0"/>
+    <parent link="FR_thigh"/>
+    <child link="FR_calf_rotor"/>
+  </joint>
+  <link name="FR_foot">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.04"/>
+      <inertia ixx="9.6e-06" ixy="0" ixz="0" iyy="9.6e-06" iyz="0" izz="9.6e-06"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/foot.stl"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.002 0 0"/>
+      <geometry>
+        <sphere radius="0.022"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint dont_collapse="true" name="FR_foot_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 -0.213"/>
+    <parent link="FR_calf"/>
+    <child link="FR_foot"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="RL_hip">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0054 0.00194 -0.000105"/>
+      <mass value="0.678"/>
+      <inertia ixx="0.00048" ixy="3.01E-06" ixz="-1.11E-06" iyy="0.000884" iyz="-1.42E-06" izz="0.000596"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 3.1415 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/hip.stl"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0.08 0"/>
+      <geometry>
+        <cylinder length="0.04" radius="0.046"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="RL_hip_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="-0.1934 0.0465 0"/>
+    <parent link="base"/>
+    <child link="RL_hip"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="23.7" lower="-1.0472" upper="1.0472" velocity="30.1"/>
+  </joint>
+  <link name="RL_hip_rotor">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.089"/>
+      <inertia ixx="0.000111842" ixy="0.0" ixz="0.0" iyy="0.000059647" iyz="0.0" izz="0.000059647"/>
+    </inertial>
+  </link>
+  <joint name="RL_hip_rotor_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.11215 0.04675 0"/>
+    <parent link="base"/>
+    <child link="RL_hip_rotor"/>
+  </joint>
+  <link name="RL_thigh">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.00374 -0.0223 -0.0327"/>
+      <mass value="1.152"/>
+      <inertia ixx="0.00584" ixy="8.72E-05" ixz="-0.000289" iyy="0.0058" iyz="0.000808" izz="0.00103"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/thigh.stl"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 1.5707963267948966 0" xyz="0 0 -0.1065"/>
+      <geometry>
+        <box size="0.213 0.0245 0.034"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="RL_thigh_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0.0955 0"/>
+    <parent link="RL_hip"/>
+    <child link="RL_thigh"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="23.7" lower="-0.5236" upper="4.5379" velocity="30.1"/>
+  </joint>
+  <link name="RL_thigh_rotor">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.089"/>
+      <inertia ixx="0.000059647" ixy="0.0" ixz="0.0" iyy="0.000111842" iyz="0.0" izz="0.000059647"/>
+    </inertial>
+  </link>
+  <joint name="RL_thigh_rotor_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 -0.00015 0"/>
+    <parent link="RL_hip"/>
+    <child link="RL_thigh_rotor"/>
+  </joint>
+  <link name="RL_calf">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.00548 -0.000975 -0.115"/>
+      <mass value="0.154"/>
+      <inertia ixx="0.00108" ixy="3.4E-07" ixz="1.72E-05" iyy="0.0011" iyz="8.28E-06" izz="3.29E-05"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/calf.stl"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 -0.2 0" xyz="0.01 0 -0.06"/>
+      <geometry>
+        <cylinder length="0.12" radius="0.013"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="RL_calf_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0 -0.213"/>
+    <parent link="RL_thigh"/>
+    <child link="RL_calf"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="45.43" lower="-2.7227" upper="-0.83776" velocity="15.70"/>
+  </joint>
+  <link name="RL_calflower">
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.065" radius="0.011"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="RL_calflower_joint" type="fixed">
+    <origin rpy="0 0.05 0" xyz="0.020 0 -0.148"/>
+    <parent link="RL_calf"/>
+    <child link="RL_calflower"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="RL_calflower1">
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.03" radius="0.0155"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="RL_calflower1_joint" type="fixed">
+    <origin rpy="0 0.48 0" xyz="-0.01 0 -0.04"/>
+    <parent link="RL_calflower"/>
+    <child link="RL_calflower1"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="RL_calf_rotor">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.089"/>
+      <inertia ixx="0.000059647" ixy="0.0" ixz="0.0" iyy="0.000111842" iyz="0.0" izz="0.000059647"/>
+    </inertial>
+  </link>
+  <joint name="RL_calf_rotor_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 -0.03235 0"/>
+    <parent link="RL_thigh"/>
+    <child link="RL_calf_rotor"/>
+  </joint>
+  <link name="RL_foot">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.04"/>
+      <inertia ixx="9.6e-06" ixy="0" ixz="0" iyy="9.6e-06" iyz="0" izz="9.6e-06"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/foot.stl"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.002 0 0"/>
+      <geometry>
+        <sphere radius="0.022"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint dont_collapse="true" name="RL_foot_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 -0.213"/>
+    <parent link="RL_calf"/>
+    <child link="RL_foot"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="RR_hip">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0054 -0.00194 -0.000105"/>
+      <mass value="0.678"/>
+      <inertia ixx="0.00048" ixy="-3.01E-06" ixz="-1.11E-06" iyy="0.000884" iyz="1.42E-06" izz="0.000596"/>
+    </inertial>
+    <visual>
+      <origin rpy="3.1415 3.1415 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/hip.stl"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 -0.08 0"/>
+      <geometry>
+        <cylinder length="0.04" radius="0.046"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="RR_hip_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="-0.1934 -0.0465 0"/>
+    <parent link="base"/>
+    <child link="RR_hip"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="23.7" lower="-1.0472" upper="1.0472" velocity="30.1"/>
+  </joint>
+  <link name="RR_hip_rotor">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.089"/>
+      <inertia ixx="0.000111842" ixy="0.0" ixz="0.0" iyy="0.000059647" iyz="0.0" izz="0.000059647"/>
+    </inertial>
+  </link>
+  <joint name="RR_hip_rotor_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.11215 -0.04675 0"/>
+    <parent link="base"/>
+    <child link="RR_hip_rotor"/>
+  </joint>
+  <link name="RR_thigh">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.00374 0.0223 -0.0327"/>
+      <mass value="1.152"/>
+      <inertia ixx="0.00584" ixy="-8.72E-05" ixz="-0.000289" iyy="0.0058" iyz="-0.000808" izz="0.00103"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/thigh_mirror.stl"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 1.5707963267948966 0" xyz="0 0 -0.1065"/>
+      <geometry>
+        <box size="0.213 0.0245 0.034"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="RR_thigh_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="0 -0.0955 0"/>
+    <parent link="RR_hip"/>
+    <child link="RR_thigh"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="23.7" lower="-0.5236" upper="4.5379" velocity="30.1"/>
+  </joint>
+  <link name="RR_thigh_rotor">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.089"/>
+      <inertia ixx="0.000059647" ixy="0.0" ixz="0.0" iyy="0.000111842" iyz="0.0" izz="0.000059647"/>
+    </inertial>
+  </link>
+  <joint name="RR_thigh_rotor_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0.00015 0"/>
+    <parent link="RR_hip"/>
+    <child link="RR_thigh_rotor"/>
+  </joint>
+  <link name="RR_calf">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.00548 0.000975 -0.115"/>
+      <mass value="0.154"/>
+      <inertia ixx="0.00108" ixy="-3.4E-07" ixz="1.72E-05" iyy="0.0011" iyz="-8.28E-06" izz="3.29E-05"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/calf_mirror.stl"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 -0.2 0" xyz="0.01 0 -0.06"/>
+      <geometry>
+        <cylinder length="0.12" radius="0.013"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="RR_calf_joint" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0 -0.213"/>
+    <parent link="RR_thigh"/>
+    <child link="RR_calf"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="45.43" lower="-2.7227" upper="-0.83776" velocity="15.70"/>
+  </joint>
+  <link name="RR_calflower">
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.065" radius="0.011"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="RR_calflower_joint" type="fixed">
+    <origin rpy="0 0.05 0" xyz="0.020 0 -0.148"/>
+    <parent link="RR_calf"/>
+    <child link="RR_calflower"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="RR_calflower1">
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="0.03" radius="0.0155"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="RR_calflower1_joint" type="fixed">
+    <origin rpy="0 0.48 0" xyz="-0.01 0 -0.04"/>
+    <parent link="RR_calflower"/>
+    <child link="RR_calflower1"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="RR_calf_rotor">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.089"/>
+      <inertia ixx="0.000059647" ixy="0.0" ixz="0.0" iyy="0.000111842" iyz="0.0" izz="0.000059647"/>
+    </inertial>
+  </link>
+  <joint name="RR_calf_rotor_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0.03235 0"/>
+    <parent link="RR_thigh"/>
+    <child link="RR_calf_rotor"/>
+  </joint>
+  <link name="RR_foot">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.04"/>
+      <inertia ixx="9.6e-06" ixy="0" ixz="0" iyy="9.6e-06" iyz="0" izz="9.6e-06"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/foot.stl"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.002 0 0"/>
+      <geometry>
+        <sphere radius="0.022"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint dont_collapse="true" name="RR_foot_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 -0.213"/>
+    <parent link="RR_calf"/>
+    <child link="RR_foot"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="imu">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="imu_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.02557 0 0.04232"/>
+    <parent link="base"/>
+    <child link="imu"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="radar">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="radar_joint" type="fixed">
+    <origin rpy="0 2.8782 0" xyz="0.28945 0 -0.046825"/>
+    <parent link="base"/>
+    <child link="radar"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <joint name="front_camera_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.32715 -0.00003 0.04297"/>
+    <parent link="base"/>
+    <child link="front_camera"/>
+  </joint>
+  <link name="front_camera">
+  </link>
+  <!--the arm urdf .........................................................................................................-->
+  <joint name="z1_to_go2" type="fixed">
+    <parent link="base"/>
+    <child link="base_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0.055"/>
+  </joint>
+  <link name="base_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.00048697 -2.9605E-12 0.017142"/>
+      <mass value="0.077233"/>
+      <inertia ixx="0.00010316" ixy="-1.0285E-14" ixz="2.0449E-07" iyy="0.00011888" iyz="7.3026E-15" izz="0.00018362"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/base_link.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/base_link.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Link1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0024649 0.00010517 0.032696"/>
+      <mass value="0.13174"/>
+      <inertia ixx="6.7236E-05" ixy="-5.5664E-08" ixz="7.0454E-08" iyy="5.416E-05" iyz="-3.5709E-07" izz="4.6637E-05"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/Link1.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/Link1.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Joint1" type="revolute">
+    <origin rpy="0 0 -3.1416" xyz="0 0 0.0533"/>
+    <parent link="base_link"/>
+    <child link="Link1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="20" lower="-2.35" upper="2.35" velocity="20"/>
+  </joint>
+  <link name="Link2">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0002018 0.19201 -0.027007"/>
+      <mass value="0.20213"/>
+      <inertia ixx="0.00025682" ixy="-1.139E-07" ixz="5.5667E-08" iyy="6.3307E-05" iyz="-3.5717E-07" izz="0.00022968"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/Link2.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/Link2.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Joint2" type="revolute">
+    <origin rpy="1.5708 0 -3.1416" xyz="0 0.028 0.0563"/>
+    <parent link="Link1"/>
+    <child link="Link2"/>
+    <axis xyz="0 0 -1"/>
+    <limit effort="20" lower="-1.57" upper="1.57" velocity="20"/>
+  </joint>
+  <link name="Link3">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.015164 0.044482 -0.027461"/>
+      <mass value="0.0629"/>
+      <inertia ixx="1.7232E-05" ixy="-2.6967E-06" ixz="-9.4911E-11" iyy="1.2606E-05" iyz="-9.9169E-11" izz="1.4964E-05"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/Link3.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/Link3.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Joint3" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0.2693 0.0009"/>
+    <parent link="Link2"/>
+    <child link="Link3"/>
+    <axis xyz="0 0 -1"/>
+    <limit effort="20" lower="-1.57" upper="1.57" velocity="20"/>
+  </joint>
+  <link name="Link4">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.00029556 -0.00016104 0.091339"/>
+      <mass value="0.083332"/>
+      <inertia ixx="3.9308E-05" ixy="1.0126E-08" ixz="-9.4316E-08" iyy="3.4378E-05" iyz="-1.6915E-09" izz="1.1597E-05"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/Link4.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/Link4.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Joint4" type="revolute">
+    <origin rpy="-1.5708 0 -1.5708" xyz="0.0577 0.042 -0.0275"/>
+    <parent link="Link3"/>
+    <child link="Link4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="20" lower="-2.35" upper="2.35" velocity="20"/>
+  </joint>
+  <link name="Link5">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.040573 0.0062891 -0.023838"/>
+      <mass value="0.053817"/>
+      <inertia ixx="1.3072E-05" ixy="-3.9511E-07" ixz="-3.1889E-10" iyy="8.6301E-06" iyz="-1.8416E-09" izz="1.1049E-05"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/Link5.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/Link5.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Joint5" type="revolute">
+    <origin rpy="1.5708 -1.5708 0" xyz="-0.0001 -0.0237 0.14018"/>
+    <parent link="Link4"/>
+    <child link="Link5"/>
+    <axis xyz="0 0 -1"/>
+    <limit effort="20" lower="-1.57" upper="1.57" velocity="20"/>
+  </joint>
+  <link name="Link6">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.0068528 -3.9973E-06 0.039705"/>
+      <mass value="0.077892"/>
+      <inertia ixx="3.8236E-05" ixy="1.3465E-08" ixz="-2.0614E-07" iyy="1.7707E-05" iyz="-6.7117E-10" izz="4.8839E-05"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/Link6.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/Link6.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Joint6" type="revolute">
+    <origin rpy="-1.5708 0 -1.5708" xyz="0.0825 -0.0010782 -0.023822"/>
+    <parent link="Link5"/>
+    <child link="Link6"/>
+    <axis xyz="0 0 -1"/>
+    <limit effort="20" lower="-2.35" upper="2.35" velocity="20"/>
+  </joint>
+  <link name="Link7_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.018927 0.006 0.012082"/>
+      <mass value="0.015046"/>
+      <inertia ixx="1.2692E-06" ixy="7.7441E-20" ixz="-1.133E-07" iyy="2.0229E-06" iyz="1.2044E-20" izz="2.6177E-06"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/Link7_1.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/Link7_1.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Joint7_1" type="prismatic">
+    <origin rpy="-1.5714 -1.5708 0" xyz="-0.0056012 -0.029636 0.0706"/>
+    <parent link="Link6"/>
+    <child link="Link7_1"/>
+    <axis xyz="0 0 -1"/>
+    <limit effort="20" lower="0" upper="0.03" velocity="20"/>
+  </joint>
+  <link name="Link7_2">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.018927 -0.006 0.012082"/>
+      <mass value="0.015046"/>
+      <inertia ixx="1.2692E-06" ixy="-7.8273E-20" ixz="-1.133E-07" iyy="2.0229E-06" iyz="-1.2122E-20" izz="2.6177E-06"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/Link7_2.STL"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/hafiz/go2_d1_ws/src/go2_with_d1_description/meshes/Link7_2.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="Joint7_2" type="prismatic">
+    <origin rpy="1.5702 -1.5708 0" xyz="-0.0056388 0.02964 0.0706"/>
+    <parent link="Link6"/>
+    <child link="Link7_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="20" lower="-0.03" upper="0" velocity="20"/>
+    <mimic joint="Joint7_1" multiplier="-1"/>
+  </joint>
+  <!-- 
+  <xacro:default_transmission joint_name="FL_hip_joint" />
+  <xacro:default_transmission joint_name="FL_thigh_joint" />
+  <xacro:default_transmission joint_name="FL_calf_joint" />
+  <xacro:default_transmission joint_name="FR_hip_joint" />
+  <xacro:default_transmission joint_name="FR_thigh_joint" />
+  <xacro:default_transmission joint_name="FR_calf_joint" />
+  <xacro:default_transmission joint_name="RL_hip_joint" />
+  <xacro:default_transmission joint_name="RL_thigh_joint" />
+  <xacro:default_transmission joint_name="RL_calf_joint" />
+  <xacro:default_transmission joint_name="RR_hip_joint" />
+  <xacro:default_transmission joint_name="RR_thigh_joint" />
+  <xacro:default_transmission joint_name="RR_calf_joint" />
+  <xacro:default_transmission joint_name="Joint1" />
+  <xacro:default_transmission joint_name="Joint2" />
+  <xacro:default_transmission joint_name="Joint3" />
+  <xacro:default_transmission joint_name="Joint4" />
+  <xacro:default_transmission joint_name="Joint5" />
+  <xacro:default_transmission joint_name="Joint6" />
+  <xacro:default_transmission joint_name="Joint7_1" />
+   -->
+<ros2_control name="RobotSystem" type="system">
+    <hardware>
+      <plugin>ign_ros2_control/IgnitionSystem</plugin>
+    </hardware>
+
+    <joint name="FL_hip_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="FL_thigh_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="FL_calf_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="FR_hip_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="FR_thigh_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="FR_calf_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="RL_hip_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="RL_thigh_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="RL_calf_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="RR_hip_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="RR_thigh_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="RR_calf_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="Joint1">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="Joint2">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="Joint3">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="Joint4">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="Joint5">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="Joint6">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="Joint7_1">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="Joint7_2">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+  </ros2_control><transmission name="FL_hip_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="FL_hip_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="FL_hip_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission><transmission name="FL_thigh_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="FL_thigh_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="FL_thigh_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission><transmission name="FL_calf_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="FL_calf_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="FL_calf_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission><transmission name="FR_hip_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="FR_hip_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="FR_hip_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission><transmission name="FR_thigh_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="FR_thigh_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="FR_thigh_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission><transmission name="FR_calf_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="FR_calf_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="FR_calf_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission><transmission name="RL_hip_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RL_hip_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="RL_hip_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission><transmission name="RL_thigh_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RL_thigh_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="RL_thigh_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission><transmission name="RL_calf_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RL_calf_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="RL_calf_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission><transmission name="RR_hip_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RR_hip_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="RR_hip_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission><transmission name="RR_thigh_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RR_thigh_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="RR_thigh_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission><transmission name="RR_calf_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RR_calf_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="RR_calf_joint_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission><transmission name="Joint1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Joint1_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission><transmission name="Joint2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint2">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Joint2_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission><transmission name="Joint3_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint3">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Joint3_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission><transmission name="Joint4_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint4">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Joint4_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission><transmission name="Joint5_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint5">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Joint5_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission><transmission name="Joint6_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint6">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Joint6_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission><transmission name="Joint7_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint7_1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Joint7_1_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission><transmission name="Joint7_2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Joint7_2">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Joint7_2_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission><!-- Gazebo ROS 2 Control plugin -->
+<gazebo>
+  <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+    <robot_sim_type>gazebo_ros2_control/DefaultRobotHWSim</robot_sim_type>
+  </plugin>
+</gazebo>
+
+<!-- Camera sensor on front_camera link -->
+<gazebo reference="front_camera">
+  <material>Gazebo/Black</material>
+  <sensor name="front_camera_sensor" type="camera">
+    <update_rate>30</update_rate>
+    <camera>
+      <horizontal_fov>1.047</horizontal_fov>
+      <image>
+        <width>640</width>
+        <height>480</height>
+        <format>R8G8B8</format>
+      </image>
+      <clip>
+        <near>0.02</near>
+        <far>6.0</far>
+      </clip>
+    </camera>
+    <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+      <camera_name>front_camera</camera_name>
+      <frame_name>front_camera</frame_name>
+      <hack_baseline>0.0</hack_baseline>
+    </plugin>
+  </sensor>
+</gazebo>
+
+<!-- IMU sensor on imu link -->
+<gazebo reference="imu">
+  <sensor name="imu_sensor" type="imu">
+    <always_on>true</always_on>
+    <update_rate>200</update_rate>
+    <plugin name="imu_plugin" filename="libgazebo_ros_imu_sensor.so">
+      <initial_orientation_as_reference>false</initial_orientation_as_reference>
+    </plugin>
+  </sensor>
+</gazebo>
+
+</robot>

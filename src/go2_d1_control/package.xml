@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>go2_d1_control</name>
+  <version>0.1.2</version>
+  <description>Whole-body stabilization + arm impedance control for handover.</description>
+  <maintainer email="user@example.com">go2_d1_user</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>trajectory_msgs</exec_depend>
+  <exec_depend>control_msgs</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>tf2_geometry_msgs</exec_depend>
+  <exec_depend>kdl_parser_py</exec_depend>
+  <exec_depend>urdf_parser_py</exec_depend>
+  <exec_depend>urdfdom_py</exec_depend>
+  <exec_depend>tf_transformations</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>nav2_msgs</exec_depend>
+  <exec_depend>unitree_api</exec_depend>
+  <exec_depend>unitree_arm</exec_depend>
+
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

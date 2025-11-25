@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>go2_d1_tools</name>
+  <version>0.0.1</version>
+  <description>GO2/D1 Python tools: approach, bridges, arm sender.</description>
+  <maintainer email="you@example.com">you</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>unitree_api</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

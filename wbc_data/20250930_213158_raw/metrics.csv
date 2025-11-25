@@ -1,0 +1,11 @@
+metric,value
+mode,raw
+samples,3396
+poly_violation_pct,0.000
+tilt_compliance,1.000
+jerk_proxy_mean,0.000000
+E_hold,0.000000
+A_omega,nan
+solve_ms_median,nan
+solve_ms_p95,nan
+fallback_rate_pct,0.00

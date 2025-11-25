@@ -1,0 +1,11 @@
+build/
+install/
+log/
+sim_logs/
+__pycache__/
+*.pyc
+*.pyo
+
+# Don’t put these nested repos into this repo
+src/kdl_parser_py/
+unitree_sdk2/
