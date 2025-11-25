@@ -14,11 +14,20 @@ This workspace implements an end-to-end **real-robot** pipeline for *human–rob
 
 ---
 
+
 ## Demo video
 
-Real-robot bottle handover on the Go2-like platform:
+Real-robot following bottle on the Go2 platform:
 
-[▶️ Handover demo](./IMG_6808.mp4)
+<video src="IMG_6808.MOV"
+       controls
+       loop
+       muted
+       playsinline
+       style="max-width: 100%; height: auto;">
+  Your browser does not support the video tag.
+</video>
+
 
 
 ---
