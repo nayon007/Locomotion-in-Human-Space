@@ -375,12 +375,5 @@ If you use this for a paper, consider adding a citation section once the paper i
 
 ```
 
----
-
-If you want, next step we can:
-
-- Add a `LICENSE` and `CITATION.cff`,
-- Add a minimal `requirements.txt` / `environment.yml`,
-- Or add a short “Reproducing Fig. X / Table Y” section tied to your `experiments/` and `wbc_data/`.
 ```
 
